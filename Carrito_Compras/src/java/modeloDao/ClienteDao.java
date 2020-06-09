@@ -13,9 +13,8 @@ import modelo.Cliente;
 
 
 public class ClienteDao {
-    
-     Connection con;
     Conexion cn= new Conexion();
+    Connection con;    
     PreparedStatement ps;
     ResultSet rs;
     

@@ -11,7 +11,7 @@
     </head>
     <body>
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">CATALOGO</a>
+            <a class="navbar-brand" href="#">MI CARRITO</a>
                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                  </button>
@@ -28,22 +28,28 @@
                 </li>
             </ul>
             
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+           
             
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
+                    
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Iniciar Session
+                    ${usuario.getNombre()}
+                      <img src="img_login/Login.gif" alt="60" width="60"/>
                     </a>
                     
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-menu text-center" >
+                        <a class="dropdown-item" href="login.jsp">
+                            Registrarse
+                           
+                        </a>
+                        <a class="dropdown-item" href="#">${usuario.getNombre()}</a>
+                         <a class="dropdown-item" href="#">Ejemplo:nombres@gmail.com</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <form action="Validar" method="POST">
+                            <button name="accion" value="Salir" class="dropdown-item" href="#">SALIR</button>
+                        </form>
+                        
                     </div>
                 </li>
             </ul>
@@ -73,7 +79,7 @@
                                     <td>${car.getItem()}</td>
                                     <td>${car.getNombres()}</td>
                                     <td>${car.getDescripcion()}
-                                        <img src="Controlador_Imagen?id=${car.getIdProducto()}" width="90" height="90">
+                                       
                                     </td>
                                     <td>${car.getPrecioCompra()}</td>
                                     
@@ -113,8 +119,8 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a href="#" class="btn btn-info btn-block">Realizar Pago</a>
-                        <a href="#" class="btn btn-danger btn-block">Generar Pago</a>
+                        <a href="login.jsp" class="btn btn-info btn-block">Realizar Pago</a>
+                        <a href="login.jsp" class="btn btn-danger btn-block">Generar Pago</a>
                     </div>
                     
                 </div>
